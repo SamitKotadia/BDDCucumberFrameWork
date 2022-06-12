@@ -1,12 +1,12 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 5024062600,
+              "duration": 5378483700,
               "status": "passed"
             },
             "match": {
@@ -14,18 +14,18 @@
             }
           }
         ],
-        "line": 7,
-        "name": "Validate login page",
+        "line": 4,
+        "name": "Screenshot",
         "description": "",
-        "id": "login-feature;validate-login-page",
+        "id": "element-screenshot;screenshot",
         "after": [
           {
             "result": {
-              "duration": 639380100,
+              "duration": 675517000,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.tearDown()"
+              "location": "Hooks.tearDown(Scenario)"
             }
           }
         ],
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 168666800,
+              "duration": 151069800,
               "status": "passed"
             },
-            "line": 8,
+            "line": 5,
             "name": "I am on the home page",
             "match": {
               "location": "HomeSteps.i_am_on_the_home_page()"
@@ -46,65 +46,29 @@
           },
           {
             "result": {
-              "duration": 607108900,
+              "duration": 134234800,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I click on the Log in",
+            "line": 6,
+            "name": "I take screenshot of search field",
             "match": {
-              "location": "HomeSteps.i_click_on_the_Log_in()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 35560300,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I should see \"Welcome, Please Sign In!\" text on login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Welcome, Please Sign In!",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginSteps.i_should_see_text_on_login_page(String)"
+              "location": "HomeSteps.iTakeScreenshotOfSearchField()"
             },
             "keyword": "Then "
-          },
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 6001100,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "The url should contain with \"/login\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "/login",
-                  "offset": 29
-                }
-              ],
-              "location": "LoginSteps.the_url_should_contain_with(String)"
-            },
-            "keyword": "And "
+            "line": 3,
+            "name": "@screen"
           }
         ]
       }
     ],
-    "name": "Login feature",
-    "description": "As a customer\r\nI want to login\r\nSo that i can see my Emails",
-    "id": "login-feature",
+    "name": "Element screenshot",
+    "description": "",
+    "id": "element-screenshot",
     "keyword": "Feature",
-    "uri": "Login.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@Login"
-      }
-    ]
+    "uri": "ScreenShot.feature"
   }
 ]
