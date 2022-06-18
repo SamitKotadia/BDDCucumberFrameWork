@@ -3,7 +3,7 @@ Feature: Login feature
   As a customer
   I want to login
   So that i can see my Email
-
+  @EndToEnd
   Scenario: Validate login page
     Given I am on the home page
     When I click on the Log in
