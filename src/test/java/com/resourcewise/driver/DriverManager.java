@@ -80,27 +80,7 @@ public class DriverManager {
                 throw new IllegalAccessException("Unexpected browser");
         }
     }
-//    public void runInHeadLessMode() throws IllegalAccessException {
-//        switch (browser){
-//            case "chrome":
-//                WebDriverManager.chromedriver().setup();
-//                driver=new ChromeDriver();
-//                break;
-//            case "edge":
-//                WebDriverManager.edgedriver().setup();
-//                driver= new EdgeDriver();
-//                break;
-//            case "safari":
-//                driver= new SafariDriver();
-//                break;
-//            case "firefox":
-//                WebDriverManager.firefoxdriver().setup();
-//                driver=new FirefoxDriver();
-//                break;
-//            default:
-//                throw new IllegalAccessException("Unexpected browser");
-//        }
-//    }
+
     public void maxBrowser(){
     driver.manage().window().maximize();
 }
