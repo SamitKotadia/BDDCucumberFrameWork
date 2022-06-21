@@ -1,9 +1,7 @@
 package com.resourcewise.step_defination;
 
 import com.resourcewise.driver.DriverManager;
-import com.resourcewise.pages.CheckOutPage;
-import com.resourcewise.pages.LoginPage;
-import com.resourcewise.pages.RegistrationPage;
+import com.resourcewise.pages.*;
 import cucumber.api.java.en.Then;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -16,6 +14,8 @@ public class CommonSteps extends DriverManager {
     LoginPage loginPage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
     CheckOutPage checkOutPage = new CheckOutPage();
+    HomePage homePage = new HomePage();
+    ContactUsPage contactUsPage = new ContactUsPage();
 
     @Then("^The url should contain with \"([^\"]*)\"$")
     public void the_url_should_contain_with(String expectedUrl) throws Throwable {
@@ -52,6 +52,16 @@ public class CommonSteps extends DriverManager {
                 assertThat(myCheckOutMassage,is(equalToIgnoringCase(expectedText)));
                 System.out.println(myCheckOutMassage);
                 break;
+            case "Privacy":
+                String myPrivacyTextMassage = homePage.getPrivacyTextOnDisplay();
+                assertThat(myPrivacyTextMassage, is(equalToIgnoringCase(expectedText)));
+                break;
+            case "Contact Us":
+                String myContactUsTextMassage = contactUsPage.getContactUsDisplayMassage();
+                assertThat(myContactUsTextMassage, is(containsString(expectedText)));
+                break;
+
+
         }
 
     }

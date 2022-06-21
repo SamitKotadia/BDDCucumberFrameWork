@@ -17,6 +17,14 @@ public class HomePage extends DriverManager {
     WebElement privacyText;
     @FindBy(id = "small-searchterms")
     private WebElement searchInputField;
+    @FindBy(xpath = "//h1[contains(text(),'Privacy notice')]")
+    WebElement privacyTextOnDisplay;
+    @FindBy(xpath = "//a[contains(text(),'Contact us')]")
+    WebElement contactUsText;
+
+    public String getPrivacyTextOnDisplay(){
+    return    privacyTextOnDisplay.getText();
+    }
 
     public void takeSearchFieldScreenshot() throws IOException {
         takeElementScreenshot(searchInputField, "search");
@@ -32,6 +40,14 @@ public class HomePage extends DriverManager {
     }
     public void scrollToPrivacyPolicy(){
       driverManager.scrollTo(privacyText);
+    }
+
+    public void scrollToContactUs(){
+        driverManager.scrollTo(contactUsText);
+    }
+
+    public void clickToContactUs(){
+        contactUsText.click();
     }
 
     public void clickToPrivacyPolicy(){

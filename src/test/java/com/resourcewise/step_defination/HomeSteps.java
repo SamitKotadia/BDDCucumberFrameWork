@@ -25,15 +25,31 @@ public class HomeSteps extends DriverManager {
         assertThat(myActualUrl,is(endsWith("nopcommerce.com/")));
 
     }
-    @Given("^I scroll to footer$")
-    public void i_scroll_to_footer() throws Throwable {
-    homePage.scrollToPrivacyPolicy();
+    @Given("^I scroll to \"([^\"]*)\" on home page$")
+    public void i_scroll_to_on_home_page(String footerText) throws Throwable {
+      switch (footerText){
+          case "Privacy policy":
+              homePage.scrollToPrivacyPolicy();
+              break;
+          case "Contact Us":
+              homePage.scrollToContactUs();
+              break;
+      }
     }
 
-    @When("^I click on privacy policy$")
-    public void i_click_on_privacy_policy() throws Throwable {
-    homePage.clickToPrivacyPolicy();
+    @When("^I click on \"([^\"]*)\"$")
+    public void i_click_on(String footerElementClick) throws Throwable {
+        switch (footerElementClick){
+            case "Privacy policy":
+                homePage.clickToPrivacyPolicy();
+                break;
+            case "Contact Us":
+                homePage.clickToContactUs();
+                break;
+        }
     }
+
+
 
     @Then("^I take screenshot of search field$")
     public void iTakeScreenshotOfSearchField() throws IOException {
