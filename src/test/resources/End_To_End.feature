@@ -43,3 +43,4 @@ Feature: End to End testing
     Then I should see "Thank you" text on "confirmation" page
     And I should see "Your order has been successfully processed!" text on confirmation page
     And The url should contain with "checkout/completed"
+

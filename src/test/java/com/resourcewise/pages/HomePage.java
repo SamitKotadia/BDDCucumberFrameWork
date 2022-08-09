@@ -38,7 +38,8 @@ public class HomePage extends DriverManager {
 
         loginButton.click();
     }
-    public void scrollToPrivacyPolicy(){
+    public void
+    scrollToPrivacyPolicy(){
       driverManager.scrollTo(privacyText);
     }
 

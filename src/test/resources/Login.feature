@@ -32,8 +32,3 @@ Feature: Login feature
       | sa@sa.com         | 87654321   |
       | kotadia@gmail.com | Samit@0304 |
 
-
-
-
-
-

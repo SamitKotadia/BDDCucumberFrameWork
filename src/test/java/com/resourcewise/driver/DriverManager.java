@@ -30,6 +30,7 @@ public class DriverManager {
 
     public DriverManager(){
         PageFactory.initElements(driver,this);
+
     }
 
     public void runOnLocalBrowser() throws IllegalAccessException {
